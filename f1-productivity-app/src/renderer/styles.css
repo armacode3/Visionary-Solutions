@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 150px;
+  height: 100px;
+  background: transparent;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  -webkit-app-region: drag; /* Makes window draggable */
+}
+
+#car-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Simple F1 Car CSS */
+#f1-car {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.car-body {
+  position: absolute;
+  width: 50px;
+  height: 15px;
+  background: #e10600;
+  border-radius: 5px;
+  top: 7px;
+  left: 5px;
+}
+
+.car-wing {
+  position: absolute;
+  width: 60px;
+  height: 5px;
+  background: #333;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+}
+
+.wheel {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #222;
+  border-radius: 50%;
+  bottom: 5px;
+}
+
+.wheel-front {
+  left: 5px;
+}
+
+.wheel-back {
+  right: 5px;
+}
+
+/* Timer Display */
+#timer-display {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Controls */
+#controls {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  -webkit-app-region: no-drag;
+}
+
+#close-btn {
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+#close-btn:hover {
+  background: rgba(255, 0, 0, 1);
+}
+
+/* Animation classes */
+.car-moving {
+  animation: drive 2s ease-in-out;
+}
+
+@keyframes drive {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}

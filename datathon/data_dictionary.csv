@@ -1,0 +1,68 @@
+table,column,description,example
+company_profiles,company_id,Unique company identifier,1001
+company_profiles,company_name,Member company name,Delta Plastics
+company_profiles,sector,Business sector,Manufacturing
+company_profiles,tier_or_role,Tier for manufacturers; role for others,Tier 3 / Warehouse / Carrier
+company_profiles,region,Primary operating region,Central MI
+company_profiles,uses_chainsight,Whether the company actively uses ChainSight,Yes/No
+company_profiles,adoption_stage,Overall adoption level,Low/Medium/High
+company_profiles,data_upload_format,Typical data format submitted,"CSV, Excel, PDF, Email, API"
+company_profiles,upload_frequency,How often files are submitted,Weekly/Biweekly/Monthly/Ad-hoc
+company_profiles,data_quality_score,"0–100 shown as percentage text (e.g., 78.5%).",78.5
+company_profiles,trust_score,"0–100 shown as percentage text (e.g., 82.1%).",82.1
+company_profiles,support_requests_last_qtr,Support tickets last quarter,3
+company_profiles,analyst_headcount,Number of analysts on staff,1
+company_profiles,primary_carrier,Main logistics carrier partner,QuickRoute Carriers
+company_profiles,warehouse_capacity_utilization_pct,"Percent of capacity, shown as percentage text (e.g., 74.3%).",74.3
+company_profiles,safety_stock_policy,Whether a formal safety stock policy exists,Yes/No
+company_profiles,forecast_tool,Primary forecasting tool used,Prophet/Excel/None
+company_profiles,grant_engagement_flag,Grant program engagement status,Yes/No/Pending
+company_profiles,notes,Freeform notes,Early champion
+orders,order_id,Unique order identifier,200123
+orders,order_date,Order creation date,2024-03-12
+orders,company_id,Manufacturing company placing/shipping the order,1001
+orders,company_name,Name of the company,Delta Plastics
+orders,sku,Stock keeping unit identifier,SKU0007
+orders,region,Destination region for the order,Central MI
+orders,forecast_qty,Forecasted order quantity at the time,180
+orders,actual_qty,Actual quantity demanded/ordered,165
+orders,absolute_error,Absolute forecast error,15
+orders,mape_pct,"Absolute percentage error for the order, shown as percentage text (e.g., 9.09%).",9.09
+orders,carrier,Carrier used for shipment,Mitten Last-Mile
+orders,warehouse,Staging or fulfillment warehouse,Lakeside Warehousing
+orders,promised_date,Committed delivery date,2024-03-27
+orders,delivered_date,Actual delivery date,2024-03-27
+orders,delay_days,Days late (0 if on time),0
+orders,on_time_delivery,Delivered on/before promised date,Yes/No
+orders,expedited,Whether expedited shipping was used,Yes/No
+orders,unit_price,Unit selling price in USD (normal dollars).,14.25
+orders,revenue,Order revenue in USD (normal dollars).,2341.25
+orders,expedited_cost,Expediting cost in USD (normal dollars).,180.00
+orders,route_id,Internal route identifier,R312
+orders,warehouse_id,Internal warehouse identifier,W01
+orders,inventory_before,Inventory on hand before order fulfillment,220
+orders,safety_stock,Safety stock threshold for the SKU,140
+orders,stockout_flag,"1 if stockout occurred, else 0",0
+orders,upload_batch_date,Date the data was uploaded to ChainSight,2024-03-20
+inventory_forecasts,week_start,Week start date (Monday),2024-04-01
+inventory_forecasts,company_id,Company owning the SKU,1001
+inventory_forecasts,company_name,Company name,Delta Plastics
+inventory_forecasts,sku,Stock keeping unit identifier,SKU0007
+inventory_forecasts,region,Region of demand,Central MI
+inventory_forecasts,forecast_qty,Weekly forecasted demand,900
+inventory_forecasts,actual_demand,Weekly actual demand,870
+inventory_forecasts,error,Forecast error (forecast - actual),30
+inventory_forecasts,smape_pct,"Symmetric MAPE for the week, shown as percentage text (e.g., 3.40%).",3.4
+inventory_forecasts,beginning_inventory,Inventory at start of week,540
+inventory_forecasts,ending_inventory,Inventory at end of week,480
+inventory_forecasts,safety_stock,Target safety stock threshold,120
+inventory_forecasts,stockout_flag,"1 if stockout likely/observed, else 0",0
+inventory_forecasts,promo_flag,"1 if promotion/seasonality flagged, else 0",0/1
+inventory_forecasts,lifecycle_stage,SKU lifecycle classification,New/Mature/Declining
+inventory_forecasts,forecast_model,Model used for forecast,Prophet
+inventory_forecasts,forecast_version,Model/version tag,v3
+inventory_forecasts,data_freshness_days,Age of data at time of forecast,3
+inventory_forecasts,comment,Freeform note on context,Post-improvement period
+orders,General monetary units,"All monetary fields in 'orders' are in USD (normal dollars), not thousands or millions.",
+company_profiles,General percent notation,Percentage fields are stored as percentage text with a % sign.,
+inventory_forecasts,General percent notation,Percentage fields are stored as percentage text with a % sign.,
